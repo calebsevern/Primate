@@ -1,7 +1,7 @@
 # Primate
 Surveys without the monkey business.
 
-![Primate survey view](https://severn.me/css/img/primate.png)
+![Primate survey view](https://severn.me/css/img/primate.png?t=1)
 
 ---
 
