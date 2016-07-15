@@ -113,7 +113,7 @@ button:hover, .button:hover {
 */
 /* hide input */
 input[type="radio"]:empty {
-	margin-left: -999px;
+	margin-left: -9999px;
 }
 
 /* style label */
@@ -173,7 +173,7 @@ input[type="radio"]:focus ~ label:before {
 }
 
 .survey-form {
-  margin: auto 20px 30px 20px;
+  margin: 10px 20px 30px 20px;
 }
   
   .survey-form .question {
