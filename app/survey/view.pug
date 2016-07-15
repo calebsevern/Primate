@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  form.survey-form(method="POST" action="/response/" + survey.id)
+    h1 #{survey.title}
+    each q in survey.questions
+      div.question
+        h3 #{q.dataValues.title}
+        each o in q.options
+          div.option
+            input(type="radio" name='q-' + q.id id=o.id value=o.id required)
+            label(for=o.id) #{o.value}
+    button.button(type="submit") Submit
+

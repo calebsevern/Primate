@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div.dashboard
+    if surveys.length == 0
+      center
+        h1 No Surveys
+        a(href="/survey/new")
+          h3 Create One?
+    else
+      each s in surveys
+        a(href="/response/" + s.id id=s.id).survey
+          h3.survey-title #{s.title}
+          div.timestamp #{s.createdAt}
+          div.num-responses.button #{s.responses || 0} Responses
+

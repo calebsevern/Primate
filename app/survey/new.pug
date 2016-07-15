@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  div.create-survey
+    h1 New Survey
+    input(type="text" placeholder="Survey Name")#survey-title
+    div.new-questions
+    br
+    div
+      button#create-question(onclick="addQuestion()") Add Question 
+    br
+    div
+      button.action#create-survey(onclick="saveSurvey()") Save
+    br
+    div.danger#error
+
+  script(src="/js/admin.js")

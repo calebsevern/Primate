@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  div.login
+    img(src="/img/logo-dark.png")
+    h1 Poll Primate
+    form(method="POST" action="/auth/login")
+      input(type="password" name="token" placeholder="Secret Passcode")
+      button(type="submit") Login

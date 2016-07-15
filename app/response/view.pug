@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  div.responses
+    div.survey-name
+      a.back(href="/dashboard#" + survey.id) Go back
+      h3 #{survey.title}
+    each q in survey.questions
+      div.responses-header
+        h3 #{q.title}
+      div.responses-breakdown
+        each opt in q.options
+          div.opt
+            div.opt-name #{opt.value}
+            div.opt-percent
+              div.percent-wrapper
+                div.percent(style="width: " + opt.percent + "%; background: " + opt.color + ";")
+              div.percent-text(style="color: " + opt.color + ";") #{opt.percent}%
+            div.opt-amount #{opt.selected}

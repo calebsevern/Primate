@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Primate Poll
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    div.content
+      nav
+        if authenticated
+          a(href="/auth/logout") Sign Out
+          a(href="/dashboard") Surveys
+          a.button.new-survey(href="/survey/new") + New Survey
+          a.button.new-survey-mobile(href="/survey/new") + 
+        else
+          a(href="/auth/login") Login
+        a.logo(href="/") Poll Primate
+        a.logo-mobile(href="/") &nbsp;
+      block content
+    footer
+      a(href="https://severn.me") I made this.
