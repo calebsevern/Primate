@@ -18,6 +18,7 @@ Surveys without the monkey business.
   ```javascript
   npm install
   npm start
+  // Visible at localhost:3333 by default
   ```
 
 ---
